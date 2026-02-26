@@ -1,0 +1,42 @@
+export const TEXTOS = {
+  errores: {
+    rfcInvalido:    'El RFC no tiene el formato correcto. Debe tener 13 caracteres.',
+    curpInvalida:   'La CURP no tiene el formato correcto. Debe tener 18 caracteres.',
+    sesionExpirada: 'Tu sesión venció. Vuelve a entrar para continuar.',
+    errorRed:       'No pudimos conectarnos. Revisa tu internet e intenta de nuevo.',
+    errorGuardado:  'No pudimos guardar tu avance. Intenta de nuevo.',
+    errorPago:      'El pago no se pudo procesar. Intenta de nuevo o usa otro método.',
+    sinAcceso:      'Necesitas desbloquear este trámite para continuar.',
+  },
+  exitos: {
+    tramiteCompletado: 'Lo lograste. Tu trámite está listo.',
+    pagoExitoso:       'Pago recibido. Ya tienes acceso a la guía.',
+    progresoGuardado:  'Tu avance está guardado.',
+    sesionIniciada:    'Bienvenido de nuevo.',
+  },
+  ayudas: {
+    queEsRfc:    'Es el código que el SAT le da a cada persona para identificarla. Tiene 13 caracteres.',
+    queEsCurp:   'Es tu clave única de identidad. La encuentras en tu INE o acta de nacimiento.',
+    queEsEfirma: 'Es tu firma digital. La necesitas para trámites más avanzados en el SAT.',
+    queEsCfdi:   'Es la factura electrónica oficial en México. La "e" es de electrónica.',
+  },
+  botones: {
+    continuar:      'Continuar',
+    siguiente:      'Siguiente paso',
+    regresar:       'Regresar',
+    empezar:        'Empezar',
+    tengoTodo:      'Ya tengo todo, continuar',
+    iniciarSesion:  'Entrar',
+    registrarse:    'Crear cuenta',
+    cerrarSesion:   'Cerrar sesión',
+    verGuia:        'Ver guía completa',
+    pagarTramite:   'Desbloquear este trámite — $59',
+    suscribirAnual: 'Suscripción anual — $349',
+  },
+  estados: {
+    cargando:    'Cargando...',
+    guardando:   'Guardando...',
+    verificando: 'Verificando...',
+    enviando:    'Enviando...',
+  },
+} as const

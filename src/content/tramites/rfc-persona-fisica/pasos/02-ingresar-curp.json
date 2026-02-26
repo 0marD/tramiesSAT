@@ -1,0 +1,9 @@
+{
+  "numero": 2,
+  "titulo": "Ingresa tu CURP",
+  "instruccion": "Escribe tu CURP en el campo que aparece. Son 18 caracteres.",
+  "imagenUrl": "/screenshots/rfc/paso-02-curp.webp",
+  "imagenAlt": "Campo de texto del portal del SAT donde se ingresa la CURP, marcado con un recuadro rojo",
+  "ayuda": "La CURP tiene 18 caracteres: letras y números. Puedes copiarla desde el sitio del RENAPO si ya la tienes guardada.",
+  "advertencia": "Escríbela exactamente como aparece en tu INE, sin espacios ni guiones."
+}

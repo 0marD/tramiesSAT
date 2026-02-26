@@ -1,0 +1,9 @@
+{
+  "numero": 3,
+  "titulo": "Revisa tus datos",
+  "instruccion": "El SAT mostrará tu nombre y fecha de nacimiento. Verifica que estén correctos.",
+  "imagenUrl": "/screenshots/rfc/paso-03-datos.webp",
+  "imagenAlt": "Pantalla del SAT mostrando los datos del contribuyente extraídos de la CURP",
+  "ayuda": "Si los datos están mal, el problema es en tu CURP. Deberás corregirla primero en el RENAPO antes de continuar.",
+  "advertencia": null
+}

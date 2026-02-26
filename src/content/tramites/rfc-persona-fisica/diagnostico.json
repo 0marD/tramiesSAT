@@ -1,0 +1,41 @@
+[
+  {
+    "id": "tiene-curp",
+    "texto": "¿Ya tienes tu CURP?",
+    "tipo": "radio",
+    "opciones": [
+      {
+        "id": "tiene-curp-si",
+        "texto": "Sí, ya la tengo"
+      },
+      {
+        "id": "tiene-curp-no",
+        "texto": "No, necesito conseguirla primero",
+        "omitirPasos": []
+      }
+    ]
+  },
+  {
+    "id": "situacion-laboral",
+    "texto": "¿Cómo trabajas principalmente?",
+    "tipo": "radio",
+    "opciones": [
+      {
+        "id": "asalariado",
+        "texto": "Trabajo para una empresa"
+      },
+      {
+        "id": "freelancer",
+        "texto": "Trabajo por mi cuenta"
+      },
+      {
+        "id": "negocio",
+        "texto": "Tengo mi propio negocio"
+      },
+      {
+        "id": "primero",
+        "texto": "Es mi primera vez en el SAT"
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "numero": 5,
+  "titulo": "Confirma tu domicilio",
+  "instruccion": "Ingresa el código postal y selecciona tu colonia de la lista.",
+  "imagenUrl": "/screenshots/rfc/paso-05-domicilio.webp",
+  "imagenAlt": "Formulario de domicilio del SAT con campos de código postal y colonia",
+  "ayuda": "El código postal lo encuentras en tu recibo de luz o agua. Si tienes dudas, puedes buscarlo en el Correos de México.",
+  "advertencia": null
+}

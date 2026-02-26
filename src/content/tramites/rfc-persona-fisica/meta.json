@@ -1,0 +1,12 @@
+{
+  "slug": "rfc-persona-fisica",
+  "nombre": "RFC",
+  "descripcion": "Obtén tu Registro Federal de Contribuyentes",
+  "descripcionSeo": "Cómo sacar el RFC paso a paso. Guía actualizada con capturas del portal del SAT.",
+  "duracionMinutos": 10,
+  "requierePago": false,
+  "categoria": "identidad",
+  "versionContenido": "2024.3",
+  "ultimaActualizacion": "2024-10-15",
+  "ordenDisplay": 1
+}

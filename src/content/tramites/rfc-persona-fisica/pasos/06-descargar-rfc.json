@@ -1,0 +1,9 @@
+{
+  "numero": 6,
+  "titulo": "Descarga tu RFC",
+  "instruccion": "¡Listo! Haz clic en 'Descargar acuse' para guardar tu RFC en PDF.",
+  "imagenUrl": "/screenshots/rfc/paso-06-descarga.webp",
+  "imagenAlt": "Pantalla de confirmación del SAT con el RFC generado y el botón de descarga marcado",
+  "ayuda": "Guarda el PDF en tu celular o imprímelo. También te llegará por correo.",
+  "advertencia": null
+}

@@ -1,0 +1,9 @@
+{
+  "numero": 1,
+  "titulo": "Abre el portal del SAT",
+  "instruccion": "Entra a sat.gob.mx desde tu celular o computadora.",
+  "imagenUrl": "/screenshots/rfc/paso-01-portal.webp",
+  "imagenAlt": "Página de inicio del portal del SAT, con el botón de RFC marcado con una flecha roja",
+  "ayuda": "Si el portal tarda en cargar, espera unos segundos e intenta de nuevo. A veces hay mucho tráfico.",
+  "advertencia": null
+}

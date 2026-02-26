@@ -1,0 +1,9 @@
+{
+  "numero": 4,
+  "titulo": "Ingresa tu correo",
+  "instruccion": "Escribe un correo que uses seguido. El SAT te enviará información importante aquí.",
+  "imagenUrl": "/screenshots/rfc/paso-04-correo.webp",
+  "imagenAlt": "Campo de correo electrónico en el portal del SAT",
+  "ayuda": "Usa un correo que revises seguido, como Gmail u Hotmail. El SAT te enviará tu RFC por correo.",
+  "advertencia": "No uses el correo de tu trabajo, porque si cambias de empleo ya no podrás acceder."
+}

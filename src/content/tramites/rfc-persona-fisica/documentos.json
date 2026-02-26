@@ -1,0 +1,27 @@
+[
+  {
+    "id": "curp",
+    "nombre": "CURP impresa o en tu celular",
+    "descripcion": "La puedes descargar gratis en el sitio del RENAPO.",
+    "obligatorio": true,
+    "urlRecurso": "https://www.gob.mx/curp/"
+  },
+  {
+    "id": "ine",
+    "nombre": "INE o pasaporte vigente",
+    "descripcion": "Necesitas una identificación oficial con fotografía.",
+    "obligatorio": true
+  },
+  {
+    "id": "comprobante-domicilio",
+    "nombre": "Comprobante de domicilio reciente",
+    "descripcion": "Recibo de luz, agua o teléfono de no más de 3 meses.",
+    "obligatorio": true
+  },
+  {
+    "id": "correo",
+    "nombre": "Correo electrónico activo",
+    "descripcion": "El SAT te enviará la confirmación a este correo.",
+    "obligatorio": true
+  }
+]
