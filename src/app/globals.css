@@ -6,6 +6,16 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .animation-fill-both {
+    animation-fill-mode: both;
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
 }
 
 

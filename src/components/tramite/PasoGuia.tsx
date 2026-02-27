@@ -20,20 +20,20 @@ export function PasoGuia({ paso, onAvanzar, cargando = false }: PasoGuiaProps) {
     <div className="pb-28">
       {/* Instrucción principal */}
       <div className="mb-4">
-        <h2 className="text-xl font-bold text-slate-900 mb-2">{paso.titulo}</h2>
-        <p className="text-base text-slate-700 leading-relaxed">{paso.instruccion}</p>
+        <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{paso.titulo}</h2>
+        <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed">{paso.instruccion}</p>
       </div>
 
       {/* Advertencia */}
       {paso.advertencia && (
-        <div className="flex gap-3 p-4 bg-alerta-suave border border-alerta/20 rounded-card mb-4">
+        <div className="flex gap-3 p-4 bg-alerta-suave dark:bg-orange-900/20 border border-alerta/20 rounded-card mb-4">
           <AlertTriangle size={20} className="text-alerta shrink-0 mt-0.5" aria-hidden="true" />
-          <p className="text-sm text-slate-700">{paso.advertencia}</p>
+          <p className="text-sm text-slate-700 dark:text-slate-300">{paso.advertencia}</p>
         </div>
       )}
 
       {/* Imagen del portal del SAT */}
-      <div className="relative w-full aspect-[9/16] max-h-96 rounded-card overflow-hidden bg-slate-100 mb-4">
+      <div className="relative w-full aspect-[9/16] max-h-96 rounded-card overflow-hidden bg-slate-100 dark:bg-slate-800 mb-4">
         <Image
           src={paso.imagenUrl}
           alt={paso.imagenAlt}
@@ -43,7 +43,7 @@ export function PasoGuia({ paso, onAvanzar, cargando = false }: PasoGuiaProps) {
           onError={() => {/* placeholder hasta tener las capturas reales */}}
         />
         {/* Placeholder mientras no hay imagen */}
-        <div className="absolute inset-0 flex items-center justify-center bg-slate-100 text-slate-400 text-sm">
+        <div className="absolute inset-0 flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 text-sm">
           Captura del SAT — Paso {paso.numero}
         </div>
       </div>
@@ -55,8 +55,9 @@ export function PasoGuia({ paso, onAvanzar, cargando = false }: PasoGuiaProps) {
             onClick={() => setMostrarAyuda(true)}
             className="
               w-full flex items-center gap-2 p-4 rounded-card
-              border border-dashed border-slate-300
-              text-slate-500 text-sm hover:border-marca-accion hover:text-marca-accion
+              border border-dashed border-slate-300 dark:border-slate-700
+              text-slate-500 dark:text-slate-400 text-sm
+              hover:border-marca-accion hover:text-marca-accion
               motion-safe:transition-colors duration-150
               focus-visible:outline-2 focus-visible:outline-marca-accion focus-visible:outline-offset-2
             "
@@ -79,23 +80,26 @@ export function PasoGuia({ paso, onAvanzar, cargando = false }: PasoGuiaProps) {
                 onClick={() => setMostrarAyuda(false)}
                 aria-hidden="true"
               />
-              <div className="relative bg-white rounded-t-modal p-6 max-h-[60vh] overflow-y-auto">
+              <div className="
+                relative bg-white dark:bg-slate-900 rounded-t-modal p-6 max-h-[60vh] overflow-y-auto
+                motion-safe:animate-in motion-safe:slide-in-from-bottom-4 duration-300
+              ">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 id="ayuda-titulo" className="font-semibold text-slate-900 text-lg">
+                  <h3 id="ayuda-titulo" className="font-semibold text-slate-900 dark:text-white text-lg">
                     Ayuda
                   </h3>
                   <button
                     onClick={() => setMostrarAyuda(false)}
                     aria-label="Cerrar ayuda"
-                    className="p-2 rounded-lg hover:bg-slate-100 transition-colors"
+                    className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
                   >
                     <X size={20} aria-hidden="true" />
                   </button>
                 </div>
-                <p className="text-slate-700 text-base leading-relaxed">{paso.ayuda}</p>
+                <p className="text-slate-700 dark:text-slate-300 text-base leading-relaxed">{paso.ayuda}</p>
                 <button
                   onClick={() => setMostrarAyuda(false)}
-                  className="mt-6 w-full py-3 rounded-btn border border-slate-200 text-slate-700 font-medium"
+                  className="mt-6 w-full py-3 rounded-btn border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium dark:hover:bg-slate-800 transition-colors"
                 >
                   Entendí
                 </button>

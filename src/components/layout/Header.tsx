@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, Moon, Sun } from 'lucide-react'
+import { useTheme } from '@/contexts/ThemeContext'
 
 interface HeaderProps {
   titulo?: string
@@ -10,6 +11,12 @@ interface HeaderProps {
 }
 
 export function Header({ titulo, mostrarRegresar = false, onRegresar }: HeaderProps) {
+  const { temaEfectivo, setTema } = useTheme()
+
+  const alternarTema = () => {
+    setTema(temaEfectivo === 'oscuro' ? 'claro' : 'oscuro')
+  }
+
   return (
     <header className="h-header bg-marca-profundo text-white flex items-center px-4 gap-3 shrink-0">
       {mostrarRegresar && (
@@ -33,6 +40,18 @@ export function Header({ titulo, mostrarRegresar = false, onRegresar }: HeaderPr
           TrámiteSAT
         </Link>
       )}
+
+      <button
+        onClick={alternarTema}
+        aria-label="Cambiar tema"
+        className="p-2 -mr-2 rounded-lg hover:bg-white/10 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+      >
+        {temaEfectivo === 'oscuro' ? (
+          <Sun size={20} aria-hidden="true" />
+        ) : (
+          <Moon size={20} aria-hidden="true" />
+        )}
+      </button>
     </header>
   )
 }

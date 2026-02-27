@@ -14,12 +14,12 @@ export function EstadoVacio({ titulo, descripcion, icono, accion }: EstadoVacioP
   return (
     <div className="flex flex-col items-center justify-center py-16 px-8 text-center">
       {icono && (
-        <div className="text-slate-300 mb-6" aria-hidden="true">
+        <div className="text-slate-300 dark:text-slate-600 mb-6" aria-hidden="true">
           {icono}
         </div>
       )}
-      <h2 className="text-xl font-semibold text-slate-900 mb-2">{titulo}</h2>
-      <p className="text-slate-500 text-base max-w-xs">{descripcion}</p>
+      <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">{titulo}</h2>
+      <p className="text-slate-500 dark:text-slate-400 text-base max-w-xs">{descripcion}</p>
       {accion && (
         <Link
           href={accion.href}

@@ -41,23 +41,27 @@ export function ChecklistDocumentos({ documentos, onTodosListos }: ChecklistDocu
                   motion-safe:transition-all duration-150
                   focus-visible:outline-2 focus-visible:outline-marca-accion focus-visible:outline-offset-2
                   ${marcado
-                    ? 'border-exito bg-exito-suave'
-                    : 'border-slate-200 bg-white hover:border-slate-300'
+                    ? 'border-exito bg-exito-suave dark:bg-green-900/20'
+                    : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-slate-300'
                   }
                 `}
               >
-                <div className="mt-0.5 shrink-0">
+                <div className={`
+                  mt-0.5 shrink-0
+                  motion-safe:transition-transform motion-safe:duration-200
+                  ${marcado ? 'scale-110' : 'scale-100'}
+                `}>
                   {marcado
                     ? <CheckCircle size={22} className="text-exito" aria-hidden="true" />
-                    : <Circle size={22} className="text-slate-300" aria-hidden="true" />
+                    : <Circle size={22} className="text-slate-300 dark:text-slate-600" aria-hidden="true" />
                   }
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className={`font-medium text-base ${marcado ? 'text-exito' : 'text-slate-900'}`}>
+                  <p className={`font-medium text-base ${marcado ? 'text-exito' : 'text-slate-900 dark:text-white'}`}>
                     {doc.nombre}
                   </p>
                   {doc.descripcion && (
-                    <p className="text-sm text-slate-500 mt-0.5">{doc.descripcion}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">{doc.descripcion}</p>
                   )}
                   {doc.urlRecurso && !marcado && (
                     <a

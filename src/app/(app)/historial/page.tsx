@@ -36,10 +36,10 @@ export default async function PaginaHistorial() {
             {progresos.map(progreso => (
               <li
                 key={progreso.tramite_slug}
-                className="bg-white rounded-card border border-slate-200 p-4"
+                className="bg-white dark:bg-slate-900 rounded-card border border-slate-200 dark:border-slate-700 p-4"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <p className="font-semibold text-slate-900 capitalize">
+                  <p className="font-semibold text-slate-900 dark:text-white capitalize">
                     {progreso.tramite_slug.replace(/-/g, ' ')}
                   </p>
                   {progreso.completado ? (
@@ -53,7 +53,7 @@ export default async function PaginaHistorial() {
                   )}
                 </div>
                 {!progreso.completado && (
-                  <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-marca-accion rounded-full"
                       style={{ width: `${Math.round((progreso.paso_actual / progreso.total_pasos) * 100)}%` }}

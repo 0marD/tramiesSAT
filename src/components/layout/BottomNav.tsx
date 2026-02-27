@@ -16,7 +16,7 @@ export function BottomNav() {
 
   return (
     <nav
-      className="h-bottomnav bg-white border-t border-slate-100 flex items-center shrink-0"
+      className="h-bottomnav bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 flex items-center shrink-0"
       aria-label="Navegación principal"
     >
       {ITEMS.map(({ href, icono: Icono, etiqueta }) => {
@@ -28,7 +28,10 @@ export function BottomNav() {
             className={`
               flex-1 flex flex-col items-center justify-center gap-1 py-2
               min-h-[44px] transition-colors
-              ${activo ? 'text-marca-accion' : 'text-slate-400 hover:text-slate-600'}
+              ${activo
+                ? 'text-marca-accion'
+                : 'text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-white'
+              }
             `}
             aria-current={activo ? 'page' : undefined}
           >

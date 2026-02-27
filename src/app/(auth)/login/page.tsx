@@ -91,7 +91,7 @@ function FormularioLogin() {
   return (
     <div className="space-y-6">
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+        <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
           Correo electrónico
         </label>
         <input
@@ -102,17 +102,18 @@ function FormularioLogin() {
           placeholder="tu@correo.com"
           autoComplete="email"
           className="
-            w-full px-4 py-3 rounded-input border border-slate-300
-            text-slate-900 text-base
+            w-full px-4 py-3 rounded-input border border-slate-300 dark:border-slate-700
+            bg-white dark:bg-slate-800
+            text-slate-900 dark:text-white text-base
             focus:outline-none focus:ring-2 focus:ring-marca-accion focus:border-transparent
-            placeholder:text-slate-400
+            placeholder:text-slate-400 dark:placeholder:text-slate-500
           "
         />
       </div>
 
       {modo === 'password' && (
         <div>
-          <label htmlFor="password" className="block text-sm font-medium text-slate-700 mb-2">
+          <label htmlFor="password" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
             Contraseña
           </label>
           <input
@@ -122,8 +123,9 @@ function FormularioLogin() {
             onChange={e => setPassword(e.target.value)}
             autoComplete="current-password"
             className="
-              w-full px-4 py-3 rounded-input border border-slate-300
-              text-slate-900 text-base
+              w-full px-4 py-3 rounded-input border border-slate-300 dark:border-slate-700
+              bg-white dark:bg-slate-800
+              text-slate-900 dark:text-white text-base
               focus:outline-none focus:ring-2 focus:ring-marca-accion focus:border-transparent
             "
           />

@@ -22,6 +22,7 @@ TrámiteSAT turns complex SAT bureaucracy into simple, guided checklists. Users 
 | Progress tracking | Saves progress per trámite per user |
 | Magic link login | Passwordless auth via email |
 | Tax reminders | Push notifications for upcoming deadlines |
+| Dark mode | System, light, or dark theme — persisted in localStorage, FOUC-free |
 | PWA | Installable, works offline once loaded |
 | Pay-per-trámite | Unlock individual guides or subscribe annually |
 
@@ -121,14 +122,38 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Available Scripts
 
 ```bash
-yarn dev          # Start development server
-yarn build        # Production build
-yarn start        # Start production server
-yarn type-check   # TypeScript check (zero errors required)
-yarn lint         # ESLint
-yarn test         # Run unit tests (Vitest)
-yarn test:watch   # Run tests in watch mode
-yarn test:ci      # Run tests once, no watch (for CI)
+yarn dev            # Start development server
+yarn build          # Production build
+yarn start          # Start production server
+yarn type-check     # TypeScript check (zero errors required)
+yarn lint           # ESLint
+yarn test           # Run unit tests (Vitest)
+yarn test:watch     # Run tests in watch mode
+yarn test:coverage  # Run tests with coverage report
+yarn test:ci        # Run tests once, no watch (for CI)
+```
+
+---
+
+## Testing
+
+**124 tests** across three layers:
+
+| Layer | Files | Tests |
+|---|---|---|
+| Zod schemas (RFC, CURP, email, pagos) | `schemas.test.ts` | 36 |
+| Date utilities | `fecha.test.ts` | 12 |
+| Webhook HMAC signature | `webhook.test.ts` | 7 |
+| UI components (TramiteCard, Header, BarraProgreso, etc.) | `components/*.test.tsx` | 44 |
+| Server Actions (guardarProgreso, marcarTramiteCompletado) | `lib/acciones.test.ts` | 8 |
+| API routes (pagos/crear, pagos/webhook) | `api/*.test.ts` | 17 |
+
+Run tests:
+
+```bash
+yarn test          # watch mode
+yarn test:ci       # single run (CI)
+yarn test:coverage # with lcov report
 ```
 
 ---

@@ -13,14 +13,14 @@ export default function PaginaHome() {
       <Header />
       <PageContainer>
         <div className="mb-6">
-          <h1 className="text-2xl font-bold text-slate-900">Trámites del SAT</h1>
-          <p className="text-slate-500 mt-1">Elige el trámite que quieres hacer</p>
+          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Trámites del SAT</h1>
+          <p className="text-slate-500 dark:text-slate-400 mt-1">Elige el trámite que quieres hacer</p>
         </div>
 
         <ul className="space-y-3" aria-label="Lista de trámites disponibles">
-          {tramitesOrdenados.map(tramite => (
+          {tramitesOrdenados.map((tramite, index) => (
             <li key={tramite.slug}>
-              <TramiteCard tramite={tramite} />
+              <TramiteCard tramite={tramite} animationDelay={index * 60} />
             </li>
           ))}
         </ul>

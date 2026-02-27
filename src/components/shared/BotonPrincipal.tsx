@@ -18,7 +18,7 @@ export function BotonPrincipal({
   tipo = 'button',
 }: BotonPrincipalProps) {
   return (
-    <div className="fixed bottom-0 left-0 right-0 p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] bg-white border-t border-slate-100">
+    <div className="fixed bottom-0 left-0 right-0 p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
       <button
         type={tipo}
         onClick={onClick}

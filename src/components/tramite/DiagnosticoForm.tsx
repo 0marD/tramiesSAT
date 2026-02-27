@@ -34,7 +34,7 @@ export function DiagnosticoForm({ preguntas, tramiteSlug }: DiagnosticoFormProps
     <div className="pb-24 space-y-8">
       {preguntas.map(pregunta => (
         <fieldset key={pregunta.id} className="space-y-3">
-          <legend className="text-base font-semibold text-slate-900 mb-3">
+          <legend className="text-base font-semibold text-slate-900 dark:text-white mb-3">
             {pregunta.texto}
           </legend>
           <div className="space-y-2">
@@ -48,11 +48,11 @@ export function DiagnosticoForm({ preguntas, tramiteSlug }: DiagnosticoFormProps
                   onClick={() => seleccionarOpcion(pregunta.id, opcion.id)}
                   className={`
                     w-full p-4 rounded-card border text-left font-medium text-base
-                    min-h-[52px] motion-safe:transition-all duration-150
+                    min-h-[52px] motion-safe:transition-all motion-safe:duration-150
                     focus-visible:outline-2 focus-visible:outline-marca-accion focus-visible:outline-offset-2
                     ${seleccionada
                       ? 'border-marca-accion bg-marca-suave text-marca-accion'
-                      : 'border-slate-200 bg-white text-slate-900 hover:border-slate-300'
+                      : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:border-slate-300'
                     }
                   `}
                 >
