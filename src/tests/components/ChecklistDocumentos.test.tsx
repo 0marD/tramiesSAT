@@ -4,8 +4,8 @@ import { ChecklistDocumentos } from '@/components/tramite/ChecklistDocumentos'
 import type { Documento } from '@/types/tramite'
 
 const documentos: Documento[] = [
-  { id: 'doc-1', nombre: 'INE vigente', descripcion: 'Tu credencial para votar' },
-  { id: 'doc-2', nombre: 'CURP', descripcion: 'Tu clave única de identidad' },
+  { id: 'doc-1', nombre: 'INE vigente', descripcion: 'Tu credencial para votar', obligatorio: true },
+  { id: 'doc-2', nombre: 'CURP', descripcion: 'Tu clave única de identidad', obligatorio: true },
 ]
 
 describe('ChecklistDocumentos', () => {

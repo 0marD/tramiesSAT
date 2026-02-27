@@ -15,6 +15,7 @@ const preguntas: PreguntaDiagnostico[] = [
   {
     id: 'p1',
     texto: '¿Tienes RFC?',
+    tipo: 'radio',
     opciones: [
       { id: 'p1-si', texto: 'Sí, ya tengo RFC' },
       { id: 'p1-no', texto: 'No, necesito tramitarlo' },
@@ -23,6 +24,7 @@ const preguntas: PreguntaDiagnostico[] = [
   {
     id: 'p2',
     texto: '¿Tienes e.firma?',
+    tipo: 'radio',
     opciones: [
       { id: 'p2-si', texto: 'Sí' },
       { id: 'p2-no', texto: 'No' },
